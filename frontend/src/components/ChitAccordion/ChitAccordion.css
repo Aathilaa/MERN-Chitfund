@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.custom-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.custom-accordion-summary {
+
+    padding: 10px 20px;
+}
+
+.custom-accordion-details {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .custom-accordion-summary {
+        font-size: 14px;
+    }
+
+    .custom-accordion-details {
+        padding: 10px;
+    }
+
+    .MuiTableCell-root {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .MuiButton-root {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-accordion-summary {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .custom-accordion-details {
+        padding: 8px;
+    }
+
+    .MuiTableCell-root {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    .MuiButton-root {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    /* Make the table scrollable on smaller screens */
+    .MuiTableContainer-root {
+        overflow-x: auto;
+    }
+}
+

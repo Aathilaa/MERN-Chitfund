@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+.img{
+    background-image: url('../../Assets/homebg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: azure;
+    height: 400px;
+}
+.home {
+    padding-left:700px;
+    padding-top:140px;
+    padding-right: 7px;
+   
+  }
+ 
+.home h1, .home p {
+    color: azure;
+  }
+  .home-button {
+    padding:10px 20px;
+    margin-top: 10px;
+    background-color: #cada12;
+    color: azure;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news input {
+    width: 80vw;
+    padding: 11px;
+    margin-bottom: 10px;
+    border: solid black 3px;
+}
+
+.news button {
+    margin-top: 10px;
+    color: white;
+    background-color: #cada12;
+    border-radius: 10px;
+    padding: 10px;
+}
+/* Media Query for tablets */
+@media (max-width: 768px) {
+    .home {
+      padding-left: 20px;
+      padding-top: 80px;
+      text-align: center;
+    }
+  
+    .home h1 {
+      font-size: 1.5rem;
+    }
+  
+    .home p {
+      font-size: 1rem;
+    }
+  
+    .home-button {
+      font-size: 1rem;
+    }
+  
+    .img {
+      height: 300px;
+    }
+  
+    .news input {
+      width: 90vw;
+      padding: 10px;
+    }
+  }
+  
+  /* Media Query for mobile screens */
+  @media (max-width: 480px) {
+    .home {
+      padding-left: 10px;
+      padding-top: 60px;
+      text-align: center;
+    }
+  
+    .home h1 {
+      font-size: 1.2rem;
+    }
+  
+    .home p {
+      font-size: 0.9rem;
+    }
+  
+    .home-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .img {
+      height: 250px;
+    }
+  
+    .news input {
+      width: 90vw;
+      padding: 8px;
+    }
+  
+    .news button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }

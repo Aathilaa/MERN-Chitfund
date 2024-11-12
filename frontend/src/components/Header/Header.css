@@ -1,0 +1,98 @@
+/* Import the Font Awesome library */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cada00;
+  color: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  transition: top 0.3s;
+  padding: 10px;
+  box-shadow: rgba(196, 201, 118, 0.25) 0px 30px 60px -12px inset,
+              rgba(201, 231, 118, 0.3) 0px 18px 36px -18px inset;
+  z-index: 1000;
+}
+
+.logo img {
+  margin-left: 10px;
+  width: 180px;
+  height: 45px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: large;
+  transition: color 0.3s;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Toggle button for mobile screens */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Query for tablet screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide navigation links by default on mobile */
+    flex-direction: column;
+    background-color: #cada00;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show navigation links when menu is toggled */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile screens */
+  }
+
+  .logo img {
+    width: 150px; /* Adjust logo size for mobile */
+  }
+}
+/* Media Query for screens 480px and below */
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: medium; /* Slightly smaller font for better fit */
+    padding: 8px; /* Reduce padding for better spacing on small screens */
+  }
+
+  .logo img {
+    width: 130px; /* Further adjust logo size for very small screens */
+  }
+
+  .menu-icon {
+    font-size: 20px; /* Adjust menu icon size for smaller screens */
+  }
+}
+
+
+

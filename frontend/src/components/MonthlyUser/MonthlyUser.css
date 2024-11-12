@@ -1,0 +1,109 @@
+.product-search {
+    width: 80%;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex; 
+    height: 35px;
+    margin-left: 120px;
+    padding:10px;
+    margin-top:90px;
+}
+.product-search input{
+    border:none;
+    background-color: transparent;
+    width:100%;
+}
+.product-search input:focus{
+    outline: none;
+}
+h2{
+    text-align: center;
+}
+body{
+    background-color: #e2e2e2;
+    background: linear-gradient(to right, #e2e2e2, #e4ec92);
+}
+.btn-color{
+    background-color: #cada12;
+    color:white;
+    border-radius: 5px;
+    width:50px;
+    font-weight: 400;
+    border:none ;
+    height: max-content;
+    cursor: pointer;
+}
+.header-font-weight {
+    font-weight: 600;
+}
+/* Media Queries for Tablet and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* For tablets and smaller screens */
+    .product-search {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+        padding: 8px;
+        margin-top: 70px;
+    }
+
+    .product-search input {
+        font-size: 14px;
+    }
+
+    .btn-color {
+        font-size: 12px;
+        width: 60px;
+        padding: 5px 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    /* Adjust DataGrid for smaller screens */
+    .MuiDataGrid-root {
+        font-size: 14px; /* Smaller text size */
+    }
+}
+
+/* Media Queries for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* For mobile devices */
+    .product-search {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 15px;
+        padding: 8px;
+    }
+
+    .product-search input {
+        font-size: 12px;
+    }
+
+    .btn-color {
+        font-size: 10px;
+        width: 50px;
+        padding: 5px 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    /* DataGrid adjustments */
+    .MuiDataGrid-root {
+        font-size: 12px; /* Even smaller text size */
+    }
+
+    .MuiDataGrid-columnHeaders {
+        font-size: 14px; /* Column header adjustment */
+    }
+
+    /* Make the DataGrid full width on small screens */
+    .MuiDataGrid-root {
+        width: 100%;
+    }
+}

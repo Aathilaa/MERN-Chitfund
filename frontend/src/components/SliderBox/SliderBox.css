@@ -1,0 +1,71 @@
+/* SliderBox.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    padding:20px 0;
+}
+
+.slider {
+    display: inline-flex;
+    transition: transform 0.5s ease;
+    padding:0 20px;
+    animation:slide 20s linear infinite;
+}
+
+.slider-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 0 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 200px; /* Adjust based on your content */
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slider.stop {
+    animation: none; /* Stop the animation on hover */
+    cursor: pointer;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* Tablet Screens */
+@media (max-width: 768px) {
+    .slider-box {
+        min-width: 150px; /* Reduce box width */
+        padding: 20px;
+        font-size: 16px;
+        margin: 0 15px;
+    }
+    
+    .slider {
+        animation: slide 25s linear infinite; /* Slower animation for smaller screens */
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .slider-box {
+        min-width: 120px; /* Further reduce box width */
+        padding: 15px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .slider {
+        animation: slide 30s linear infinite; /* Even slower animation for mobile */
+    }
+}
+

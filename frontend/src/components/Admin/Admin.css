@@ -1,0 +1,63 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Default layout for larger screens */
+  gap: 20px;
+}
+
+.dashboard-card {
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.dashboard-card h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.dashboard-card p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Mobile View (screens smaller than 600px) */
+@media (max-width: 600px) {
+  .dashboard-container {
+      padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .dashboard-grid {
+      grid-template-columns: 1fr; /* Stack cards in one column */
+  }
+
+  .dashboard-card h2 {
+      font-size: 1.2em; /* Smaller heading font size */
+  }
+
+  .dashboard-card p {
+      font-size: 1em; /* Smaller paragraph font size */
+  }
+}
+
+/* Tablet View (screens between 600px and 900px) */
+@media (max-width: 900px) {
+  .dashboard-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablet screens */
+  }
+
+  .dashboard-card h2 {
+      font-size: 1.3em; /* Slightly smaller heading font size */
+  }
+
+  .dashboard-card p {
+      font-size: 1.1em; /* Slightly smaller paragraph font size */
+  }
+}
+
+  

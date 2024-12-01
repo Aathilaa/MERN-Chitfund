@@ -1,0 +1,136 @@
+/* PaymentPopup.css */
+
+
+/* Overlay style to create the background blur effect */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px); /* Blur effect */
+  z-index: 1000; /* Ensure it appears on top of other elements */
+}
+
+/* Popup content style */
+.popup-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px; /* Limit the width of the popup */
+}
+
+
+/* Button styles */
+.btn-submit {
+  background-color: #cada12;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 48%; /* Ensure buttons take up equal width */
+  text-align: center;
+}
+
+.btn-submit:hover {
+  background-color: #8e9441;
+}
+
+/* Style for the form buttons container */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 1px solid green;
+  border-radius: 5px;
+  width: max-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+.success-popup p {
+  margin: 0;
+}
+
+.success-popup button {
+  margin-top: 10px;
+  width: 100%; /* Ensure the button fills the width */
+}
+/* Media Queries for Tablet and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Popup content adjusts for tablet screen */
+  .popup-content {
+    max-width: 80%; /* Take up more screen width */
+    padding: 15px;
+  }
+
+  .btn-submit {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .form-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add space between stacked buttons */
+  }
+
+  /* Success popup styles */
+  .success-popup {
+    top: 60%; /* Adjust top position for tablets */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust width for tablets */
+  }
+}
+
+/* Media Queries for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Popup content adjusts for mobile screens */
+  .popup-content {
+    max-width: 90%; /* Take up even more screen width */
+    padding: 10px;
+  }
+
+  .btn-submit {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .form-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 8px; /* Add space between stacked buttons */
+  }
+
+  /* Success popup styles */
+  .success-popup {
+    top: 55%; /* Adjust top position for mobile */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjust width for mobile */
+  }
+
+  /* Style for the success button (align center) */
+  .success-popup button {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
